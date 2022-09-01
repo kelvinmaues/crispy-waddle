@@ -8,19 +8,6 @@ import TipInput from "./TipInput";
 import useOrderCalculator from "./hooks/useOrderCalculator";
 import { FoodItem } from "./types";
 
-// const DEFAULT_LIST = [
-//   {
-//     name: "Hamburger",
-//     amount: 2,
-//     cost: 34.222,
-//   },
-//   {
-//     name: "Fries",
-//     amount: 2,
-//     cost: 15,
-//   },
-// ];
-
 const TipCalculator = () => {
   const [foodList, setFoodList] = useState<FoodItem[]>([]);
   const [tipPercentage, setTipPercentage] = useState("0");

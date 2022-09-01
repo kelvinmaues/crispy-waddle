@@ -18,7 +18,11 @@ const NEW_FOOD_ITEM = {
   cost: "0",
 }
 
-const FoodItemForm: React.FC<FoodItemFormProps> = ({ onAddFoodItem, onEditFoodItem, currentFoodItem }) => {
+const FoodItemForm: React.FC<FoodItemFormProps> = ({ 
+  onAddFoodItem, 
+  onEditFoodItem, 
+  currentFoodItem 
+}) => {
   const [foodItem, setFoodItem] = React.useState(NEW_FOOD_ITEM);
 
   useEffect(() => {
@@ -54,6 +58,7 @@ const FoodItemForm: React.FC<FoodItemFormProps> = ({ onAddFoodItem, onEditFoodIt
         <FormControl width="full">
           <FormLabel>Food</FormLabel>
           <Input
+            name="food"
             value={foodItem.name}
             onChange={(e) => onChangeField("name", e.target.value)}
             required
@@ -63,6 +68,7 @@ const FoodItemForm: React.FC<FoodItemFormProps> = ({ onAddFoodItem, onEditFoodIt
         </FormControl>
 
         <SharedNumberInput.FormControl
+          name="amount"
           label="Amount"
           min={1}
           value={foodItem.amount}
@@ -70,6 +76,7 @@ const FoodItemForm: React.FC<FoodItemFormProps> = ({ onAddFoodItem, onEditFoodIt
         />
 
         <SharedNumberInput.FormControl
+          name="cost"
           label="Cost"
           precision={2}
           step={0.2}
