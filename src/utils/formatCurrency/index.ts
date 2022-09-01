@@ -1,1 +1,6 @@
-export const formatCurrency = (cost: number): string => (Math.round(cost * 100) / 100).toFixed(2);
+const dollarUSLocale = Intl.NumberFormat("en-US", {
+  style: "currency",
+  currency: "USD",
+});
+
+export const formatCurrency = (cost: number): string => dollarUSLocale.format(cost);
