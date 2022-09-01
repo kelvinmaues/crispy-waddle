@@ -1,6 +1,6 @@
 export type FoodItem = {
   name: string;
-  cost: number;
+  cost: string;
   amount: number;
 };
 
