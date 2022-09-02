@@ -49,7 +49,7 @@ const TipCalculator = () => {
         <FoodList
           foodList={foodList}
           onRemove={onRemoveFoodItem}
-          onUpdate={setItemPosition}
+          onEdit={setItemPosition}
         />
 
         <HStack spacing={8} alignItems="flex-end">
