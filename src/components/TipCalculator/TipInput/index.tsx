@@ -10,6 +10,7 @@ const TipInput: React.FC<TipInputProps> = ({
 
   return (
     <SharedNumberInput.FormControl
+      name="Tip"
       label="Tip"
       precision={2}
       step={0.2}
